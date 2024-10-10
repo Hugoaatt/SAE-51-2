@@ -74,11 +74,11 @@ Cette solution est idéale pour les grandes entreprises ayant besoin de capacit�
 
 ---
 
-# Solution 4 : Pipeline léger de collecte et traitement en temps réel des logs
+## Solution 4 : Pipeline léger de collecte et traitement en temps réel des logs
 
 ---
 
-## Présentation
+### Présentation
 
 - **Fluent Bit** : Collecteur de logs léger et performant, idéal pour des environnements à faible consommation de ressources (ex. Docker, Kubernetes).
 - **Apache Kafka** : Système distribué de messagerie pour l'ingestion et la centralisation des logs en temps réel.
@@ -87,7 +87,7 @@ Cette solution est idéale pour les grandes entreprises ayant besoin de capacit�
 
 ---
 
-## Points forts
+### Points forts
 
 - **Ultra léger** : **Fluent Bit** consomme très peu de ressources, idéal pour des environnements nécessitant une faible empreinte (Docker, Kubernetes).
 - **Traitement en temps réel** : Grâce à **Kafka** et **Flink**, les logs sont traités dès leur collecte, permettant une réactivité accrue.
@@ -96,14 +96,14 @@ Cette solution est idéale pour les grandes entreprises ayant besoin de capacit�
 
 ---
 
-## Points faibles
+### Points faibles
 
 - Complexité plus élevée à mettre en place qu'une solution monolithique comme ELK.
 - Nécessite une gestion distribuée des services (Kafka, Flink).
 
 ---
 
-## Utilisation recommandée
+### Utilisation recommandée
 
 - **Monitoring en temps réel** des applications critiques.
 - **Détection d'anomalies** et gestion proactive des incidents de sécurité via un pipeline de traitement avancé.
