@@ -6,9 +6,11 @@ Dans ce document, nous allons présenter plusieurs solutions open-source permett
 ### Description
 L'ELK Stack est une suite d'outils composée de :
 
- - Elasticsearch : moteur de recherche et d'indexation.
- - Logstash : collecte et traitement des logs.
- - Kibana : visualisation des logs.
+ - Elasticsearch : moteur de recherche et d'analyse basé sur Apache Lucene.
+ - Logstash : centralise et normalise des données.
+ - Kibana : visualisation et exploration de données.
+
+Il permet de collecter, rechercher, analyser et visualiser des données en temps réel, souvent utilisé pour la gestion des logs et le suivi des performances d'infrastructures.
 
 ### Avantages
 
