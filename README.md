@@ -6,18 +6,23 @@ Dans ce document, nous allons présenter plusieurs solutions open-source permett
 ### Description
 L'ELK Stack est une suite d'outils composée de :
 
-Elasticsearch : moteur de recherche et d'indexation.
-Logstash : collecte et traitement des logs.
-Kibana : visualisation des logs.
-Avantages
-Très complet avec de nombreuses fonctionnalités.
-Dashboards interactifs et personnalisables avec Kibana.
-Grande communauté et beaucoup de documentation.
-Inconvénients
-Complexe à installer et configurer (plusieurs composants).
-Consomme beaucoup de ressources (surtout Elasticsearch).
-Certaines fonctionnalités sont payantes (via Elastic).
-Cas d'usage
+ - Elasticsearch : moteur de recherche et d'indexation.
+ - Logstash : collecte et traitement des logs.
+ - Kibana : visualisation des logs.
+
+### Avantages
+
+- Très complet avec de nombreuses fonctionnalités.
+- Dashboards interactifs et personnalisables avec Kibana.
+- Grande communauté et beaucoup de documentation.
+
+### Inconvénients
+
+- Complexe à installer et configurer (plusieurs composants).
+- Consomme beaucoup de ressources (surtout Elasticsearch).
+- Certaines fonctionnalités sont payantes (via Elastic).
+
+### Cas d'usage
 L'ELK Stack est bien adaptée aux entreprises qui ont besoin de gérer de grands volumes de logs avec des visualisations avancées.
 
 2. Loki + Promtail ou Alloy + Grafana
