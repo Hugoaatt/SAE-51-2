@@ -74,6 +74,46 @@ Cette solution est idéale pour les grandes entreprises ayant besoin de capacit�
 
 ---
 
+# Solution 4 : Pipeline léger de collecte et traitement en temps réel des logs
+
+---
+
+## Présentation
+
+- **Fluent Bit** : Collecteur de logs léger et performant, idéal pour des environnements à faible consommation de ressources (ex. Docker, Kubernetes).
+- **Apache Kafka** : Système distribué de messagerie pour l'ingestion et la centralisation des logs en temps réel.
+- **Apache Flink** : Outil de traitement en streaming, permettant de transformer et analyser les logs en temps réel.
+- **Backend de stockage** : Stockage des logs dans des solutions comme **Elasticsearch**, **ClickHouse** ou **InfluxDB** pour analyse et visualisation avec des outils comme **Grafana** ou **Kibana**.
+
+---
+
+## Points forts
+
+- **Ultra léger** : **Fluent Bit** consomme très peu de ressources, idéal pour des environnements nécessitant une faible empreinte (Docker, Kubernetes).
+- **Traitement en temps réel** : Grâce à **Kafka** et **Flink**, les logs sont traités dès leur collecte, permettant une réactivité accrue.
+- **Scalabilité** : Kafka et Flink peuvent facilement évoluer pour répondre à des volumes massifs de logs.
+- **Modularité** : Chaque composant du pipeline est indépendant, permettant des ajustements ou des extensions selon les besoins.
+
+---
+
+## Points faibles
+
+- Complexité plus élevée à mettre en place qu'une solution monolithique comme ELK.
+- Nécessite une gestion distribuée des services (Kafka, Flink).
+
+---
+
+## Utilisation recommandée
+
+- **Monitoring en temps réel** des applications critiques.
+- **Détection d'anomalies** et gestion proactive des incidents de sécurité via un pipeline de traitement avancé.
+- Parfait pour des infrastructures conteneurisées comme **Kubernetes** ou **Docker** nécessitant des solutions légères mais puissantes.
+
+---
+
+Cette solution propose un pipeline puissant, scalable et flexible pour la collecte et le traitement en temps réel des logs. Adaptée aux environnements nécessitant une réactivité immédiate, elle combine légèreté avec **Fluent Bit** et puissance de traitement via **Kafka** et **Flink**.
+
+
 ## Conclusion
 
 - **Loki + Grafana** : Solution légère, idéale pour les environnements Kubernetes ou Docker.
