@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  loki:
+    image: grafana/loki:2.2.1
+    ports:
+      - "3100:3100"
+    command: -config.file=/etc/loki/local-config.yaml
+    volumes:
+      - ./loki-config.yml:/etc/loki/local-config.yaml  # Monte le fichier de configuration
+    networks:
+      - logging-network
+
+  logagent:
+    build:
+      context: ./logagent  # Dossier où se trouve le Dockerfile de Logagent
+    volumes:
+      - /var/log:/var/log   # Monte le dossier des logs de l'hôte dans le container
+    networks:
+      - logging-network
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_SECURITY_ADMIN_USER=admin
+    networks:
+      - logging-network
+
+networks:
+  logging-network:
+    driver: bridge
+
