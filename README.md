@@ -2,8 +2,8 @@
 # Solutions libres de collecte, centralisation et présentation des logs
 Dans ce document, nous allons présenter plusieurs solutions open-source permettant de collecter, centraliser et visualiser les logs. Nous nous intéresserons à leurs fonctionnalités principales, leurs avantages et inconvénients, et leur facilité de mise en place.
 
-1. ELK Stack (Elasticsearch, Logstash, Kibana)
-Description
+## 1. ELK Stack (Elasticsearch, Logstash, Kibana)
+### Description
 L'ELK Stack est une suite d'outils composée de :
 
 Elasticsearch : moteur de recherche et d'indexation.
