@@ -1,4 +1,4 @@
-# Solutions Open Source pour la Gestion des Logs : Collecte, Centralisation et Visualisation
+# Collecte et traitement des logs de fonctionnement
 
 Ce document explore diverses solutions open-source pour gérer les logs, en détaillant leurs caractéristiques, avantages, inconvénients, ainsi que leur facilité de mise en œuvre.
 
