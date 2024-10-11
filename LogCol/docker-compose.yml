@@ -7,25 +7,26 @@ services:
       - "3100:3100"
     command: -config.file=/etc/loki/local-config.yaml
     volumes:
-      - ./loki-config.yml:/etc/loki/local-config.yaml  # Monte le fichier de configuration
+      - ./loki-config.yml:/etc/loki/local-config.yaml
     networks:
       - logging-network
 
-  logagent:
-    build:
-      context: ./logagent  # Dossier où se trouve le Dockerfile de Logagent
+  promtail:
+    image: grafana/promtail:2.2.1
     volumes:
-      - /var/log:/var/log   # Monte le dossier des logs de l'hôte dans le container
+      - ./promtail-config.yml:/etc/promtail/promtail-config.yml
+      - /var/log:/var/log
+    command: -config.file=/etc/promtail/promtail-config.yml
     networks:
       - logging-network
 
   grafana:
     image: grafana/grafana:latest
-    ports:
-      - "3000:3000"
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=admin
       - GF_SECURITY_ADMIN_USER=admin
+    ports:
+      - "3000:3000"
     networks:
       - logging-network
 

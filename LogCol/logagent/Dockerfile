@@ -1,12 +1,9 @@
-# Dockerfile pour Logagent
-FROM node:14-alpine
-
-# Installer Logagent
-RUN npm install -g @sematext/logagent
+# Utiliser une image de base compatible avec logagent
+FROM sematext/logagent:latest
 
 # Copier le fichier de configuration
 COPY logagent.conf /etc/logagent.conf
 
-# Commande d'exécution de Logagent avec le fichier de configuration
-CMD ["logagent", "--config", "/etc/logagent.conf"]
+# Exécuter logagent avec le fichier de configuration
+CMD ["logagent", "-c", "/etc/logagent.conf"]
 
