@@ -110,5 +110,3 @@ Cette solution propose un pipeline puissant, scalable et flexible pour la collec
 - **Loki + Grafana** : Solution légère, idéale pour les environnements Kubernetes ou Docker.
 - **Graylog** : Bon compromis pour des entreprises cherchant simplicité et efficacité dans la gestion de logs.
 - **ELK Stack** : Solution robuste et complète, mais qui nécessite plus de ressources et d'expertise technique.
-
-Le choix de la solution dépendra des besoins spécifiques de votre organisation en termes de complexité et de volumes de données à traiter.
